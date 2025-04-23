@@ -1,0 +1,79 @@
+/* style.css */
+body {
+    background-color: #e6f9e6; /* Light green background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Centered and styled container */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Headings */
+  h1 {
+    color: #2d7032;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h2, h3 {
+    color: #357a38;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Links */
+  a {
+    display: inline-block;
+    margin: 10px 0;
+    margin-left: 50px;
+    margin-top: 50px;
+    text-decoration: none;
+    color: #007944;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #333;
+  }
+  
+  /* Lists */
+  ul, ol {
+    text-align: left;
+    margin: 0 auto 20px auto;
+    max-width: 600px;
+    padding-left: 20px;
+  }
+  
+  /* Image */
+  img {
+    margin-top: 15px;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Responsive iframe */
+  iframe {
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-width: 712px;
+  }
+  

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/scratch.css">
+</head>
+<body>
+    <a href="index.html">Resume</a>
+    <a href="webapp.html">Web Game</a>
+    <div class="container">
+        <h1> Health and Wellness </h1>
+        <!-- rest of your content goes here -->
+    </div>
+    <!-- these are my nav links, need to reposition later-->
+    <!--see how to do 24.4 Tableau graph-->
+    <!--see 24.5 for help-->
+     <h2> Wellness Tips</h2>
+     <h3> Nutrition </h3>
+     <ul>
+        <li> Consume 3-5 servings of fruits & or vegetables per day </li>
+        <li> Make 1/2 your grains whole </li>
+        <li> Limit Saturated Fats, Sugar, and Sodium</li>
+     </ul>
+        <img src="assets/img/MyPlate.png" alt: "MyPlate Guidelines" width = "300">
+
+  <h3>Learn About the Choose My Plate Dietary Guidelines</h3>
+
+  <div style="max-width: 712px; margin: auto;">
+    <iframe width="712" height="401" 
+            src="https://www.youtube.com/embed/-J1hmmy1OB4" 
+            title="Choose My Plate Dietary Guidelines" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+    </iframe>
+  </div>
+
+     <h3> Exercise </h3>
+     <ul>
+        <li>Aerobic Exercise: 150 min/wk of moderate-intensity, 75 min/wk of vigorous-intensity</li>
+        <li>Strength training: exercise all 6 major muscle group 2x per week:</li>
+            <ol>
+                <li>Abs</li>
+                <li>Chest</li>
+                <li>Back</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </ol>
+     </ul>
+
+    <h3> Stress Management </h3>
+    <ul>
+        <li>Practice deep breathing/meditation</li>
+        <li>Sleep 7-9 hrs/night</li>
+        <li>Exercise—even a short walk—releases endorphins and helps reduce stress</li>
+    </ul>
+    <h2>World Health Statistics</h2>
+
+    <div class="chartWithKey">
+      <div class="tableauContainer">
+        <div class="tableauPlaceholder" id="viz1745432474382" style="position: relative">
+          <noscript>
+            <a href="#">
+              <img alt="工作表 1 - 2020" 
+                   src="https://public.tableau.com/static/images/Wo/WorldHealthChart_15964521967570/1/1_rss.png" 
+                   style="border: none" />
+            </a>
+          </noscript>
+          <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+            <param name="embed_code_version" value="3" />
+            <param name="site_root" value="" />
+            <param name="name" value="WorldHealthChart_15964521967570/1" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="no" />
+            <param name="static_image" value="https://public.tableau.com/static/images/Wo/WorldHealthChart_15964521967570/1/1.png" />
+            <param name="animate_transition" value="yes" />
+            <param name="display_static_image" value="yes" />
+            <param name="display_spinner" value="yes" />
+            <param name="display_overlay" value="yes" />
+            <param name="display_count" value="yes" />
+            <param name="language" value="en-US" />
+          </object>
+        </div>
+      </div>
+    
+      <div class="keyBox">
+        <strong>Key</strong><br />
+        LE = Life Expectancy<br />
+        Inc = Incidence
+      </div>
+    </div>
+    
+    <script type="text/javascript">
+      var divElement = document.getElementById('viz1745432474382');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      vizElement.style.width = '100%';
+      vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+    
+    <style>
+      .chartWithKey {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 50px;
+        max-width: 1000px;
+        margin: auto;
+        flex-wrap: wrap;
+      }
+    
+      .tableauContainer {
+        flex: 1 1 70%;
+      }
+    
+      .keyBox {
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        font-family: sans-serif;
+        font-size: 16px;
+        max-width: 200px;
+      }
+    </style>
+
+
+</body>
+</html>

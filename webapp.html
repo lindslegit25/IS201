@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animal Guessing Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #question {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #4caf50;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    #result {
+      font-size: 1.1rem;
+      margin-top: 30px;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <a href="scratch.html">Wellness</a>
+  <a href="index.html">Resume</a>
+  <h1>🐾 Animal Guessing Game</h1>
+  <p id="question">Which animal do you think the computer picked?</p>
+  <div id="buttons"></div>
+  <p id="result"></p>
+
+  <script>
+    const animals = ["Elephant", "Giraffe", "Lion", "Tiger", "Panda", "Kangaroo", "Zebra", "Penguin", "Monkey"];
+    
+    function shuffle(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    function startGame() {
+      document.getElementById("result").textContent = "";
+
+      const computerChoice = animals[Math.floor(Math.random() * animals.length)];
+      const options = shuffle([computerChoice, ...getTwoOtherAnimals(computerChoice)]);
+      
+      const buttonsDiv = document.getElementById("buttons");
+      buttonsDiv.innerHTML = "";
+
+      options.forEach(animal => {
+        const btn = document.createElement("button");
+        btn.textContent = animal;
+        btn.className = "btn";
+        btn.onclick = () => checkAnswer(animal, computerChoice);
+        buttonsDiv.appendChild(btn);
+      });
+    }
+
+    function getTwoOtherAnimals(excludeAnimal) {
+      const otherAnimals = animals.filter(a => a !== excludeAnimal);
+      shuffle(otherAnimals);
+      return otherAnimals.slice(0, 2);
+    }
+
+    function checkAnswer(selected, correct) {
+      const result = document.getElementById("result");
+      if (selected === correct) {
+        result.textContent = `🎉 Correct! It was ${correct}.`;
+      } else {
+        result.textContent = `❌ Oops! It was actually ${correct}.`;
+      }
+
+      setTimeout(startGame, 2500); // Restart game after 2.5 seconds
+    }
+
+    startGame();
+  </script>
+</body>
+</html>
+
